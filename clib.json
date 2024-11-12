@@ -1,0 +1,19 @@
+{
+    "name": "avl_tree",
+    "version": "0.1.0",
+    "repo": "goodcleanfun/avl_tree/avl_tree",
+    "description": "Generic self-balancing AVL tree",
+    "keywords": ["tree", "avl tree", "search tree", "binary search tree"],
+    "license": "MIT",
+    "dependencies": {
+      "goodcleanfun/binary_tree": "*",
+      "goodcleanfun/memory_pool": "*"
+    },
+    "development": {
+      "silentbicycle/greatest": "*"
+    },
+    "src": [
+      "src/avl_tree.h"
+    ]
+    
+  }
