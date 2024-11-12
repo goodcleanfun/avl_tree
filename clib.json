@@ -1,6 +1,6 @@
 {
     "name": "avl_tree",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "repo": "goodcleanfun/avl_tree/avl_tree",
     "description": "Generic self-balancing AVL tree",
     "keywords": ["tree", "avl tree", "search tree", "binary search tree"],
