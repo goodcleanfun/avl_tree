@@ -28,25 +28,25 @@ TEST test_avl_tree(void) {
     avl_tree_uint32_insert(tree, 7, "d");
     avl_tree_uint32_insert(tree, 9, "e");
 
-    char *a = avl_tree_uint32_search(tree->root, 1);
+    char *a = avl_tree_uint32_get(tree->root, 1);
     ASSERT_STR_EQ(a, "a");
 
-    char *b = avl_tree_uint32_search(tree->root, 3);
+    char *b = avl_tree_uint32_get(tree->root, 3);
     ASSERT_STR_EQ(b, "b");
 
-    char *c = avl_tree_uint32_search(tree->root, 5);
+    char *c = avl_tree_uint32_get(tree->root, 5);
     ASSERT_STR_EQ(c, "c");
 
-    char *d = avl_tree_uint32_search(tree->root, 7);
+    char *d = avl_tree_uint32_get(tree->root, 7);
     ASSERT_STR_EQ(d, "d");
 
-    char *e = avl_tree_uint32_search(tree->root, 9);
+    char *e = avl_tree_uint32_get(tree->root, 9);
     ASSERT_STR_EQ(e, "e");
 
     a = avl_tree_uint32_delete(tree, 1);
     ASSERT_STR_EQ(a, "a");
   
-    a = avl_tree_uint32_search(tree->root, 1);
+    a = avl_tree_uint32_get(tree->root, 1);
     ASSERT(a == NULL);
   
     b = avl_tree_uint32_delete(tree, 3);
@@ -55,7 +55,7 @@ TEST test_avl_tree(void) {
     e = avl_tree_uint32_delete(tree, 9);
     ASSERT_STR_EQ(e, "e");
 
-    c = avl_tree_uint32_search(tree->root, 5);
+    c = avl_tree_uint32_get(tree->root, 5);
     ASSERT_STR_EQ(c, "c");
 
     c = avl_tree_uint32_delete(tree, 5);
@@ -64,11 +64,11 @@ TEST test_avl_tree(void) {
     d = avl_tree_uint32_delete(tree, 7);
     ASSERT_STR_EQ(d, "d");
 
-    d = avl_tree_uint32_search(tree->root, 7);
+    d = avl_tree_uint32_get(tree->root, 7);
     ASSERT(d == NULL);
 
     avl_tree_uint32_insert(tree, 7, "d");
-    d = avl_tree_uint32_search(tree->root, 7);
+    d = avl_tree_uint32_get(tree->root, 7);
 
     avl_tree_uint32_destroy(tree);
     PASS();
